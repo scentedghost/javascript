@@ -1,0 +1,18 @@
+const form = document.querySelector("form");
+const formContainer = document.querySelector("#list");
+form.addEventListener('submit', function (e){
+    e.preventDefault();
+
+    const qtyInput = form.elements.qty;
+    const productInput = form.elements.product;
+        addProduct(product.value, qty.value);
+        productInput.value = "";
+        qtyInput.value = "";
+
+});
+
+const addProduct = (qty, product)=> {
+    const totalProduct = document.createElement("li");
+    totalProduct.textContent = `${qty} ${product}`;
+    formContainer.appendChild(totalProduct);
+};
